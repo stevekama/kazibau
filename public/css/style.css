@@ -414,10 +414,12 @@ ol {
 
 .inner-header {
 	padding: 39px 0;
+	border-radius: 50%;
 }
 
 .inner-header .logo {
 	padding: 12px 0;
+	
 }
 
 .inner-header .logo a {

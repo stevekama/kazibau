@@ -40,19 +40,11 @@
                         </div>
                         <div class="phone-service">
                             <i class=" fa fa-phone"></i>
-                            +65 11.188.888
+                            +(254)715-053109
                         </div>
                     </div>
                     <div class="ht-right">
-                        <a href="#" class="login-panel"><i class="fa fa-user"></i>Login</a>
-                        <div class="lan-selector">
-                            <select class="language_drop" name="countries" id="countries" style="width:300px;">
-                                <option value='yt' data-image="{{ asset('img/flag-1.jpg')}}" data-imagecss="flag yt"
-                                    data-title="English">English</option>
-                                <option value='yu' data-image="{{ asset('img/flag-2.jpg')}}" data-imagecss="flag yu"
-                                    data-title="Bangladesh">German </option>
-                            </select>
-                        </div>
+                        <a href="/login" class="login-panel"><i class="fa fa-user"></i>Login</a>
                         <div class="top-social">
                             <a href="#"><i class="ti-facebook"></i></a>
                             <a href="#"><i class="ti-twitter-alt"></i></a>
@@ -132,8 +124,8 @@
                                             <h5>$120.00</h5>
                                         </div>
                                         <div class="select-button">
-                                            <a href="#" class="primary-btn view-card">VIEW CARD</a>
-                                            <a href="#" class="primary-btn checkout-btn">CHECK OUT</a>
+                                            <a href="/cart" class="primary-btn view-card">VIEW CART</a>
+                                            <a href="/checkout" class="primary-btn checkout-btn">CHECK OUT</a>
                                         </div>
                                     </div>
                                 </li>
@@ -169,7 +161,6 @@
                             <li><a href="/shop">Shop</a></li>
                             <li><a href="#">Collection</a>
                                 <ul class="dropdown">
-                                    <li><a href="#">Men's</a></li>
                                     <li><a href="#">Women's</a></li>
                                     <li><a href="#">Kid's</a></li>
                                 </ul>
