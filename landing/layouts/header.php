@@ -35,7 +35,7 @@
             <div class="container">
                 <div class="ht-left">
                     <div class="mail-service">
-                        <i class=" fa fa-envelope"></i>
+                        <i class="fa fa-envelope"></i>
                         info@kazibau.co.ke
                     </div>
                     <div class="phone-service">
@@ -44,7 +44,9 @@
                     </div>
                 </div>
                 <div class="ht-right">
-                    <a href="#" class="login-panel"><i class="fa fa-user"></i>Login</a>
+                    <a href="<?php echo base_url(); ?>login.php" class="login-panel">
+                        <i class="fa fa-user"></i>Login
+                    </a>
                     <div class="top-social">
                         <a href="#"><i class="ti-facebook"></i></a>
                         <a href="#"><i class="ti-twitter-alt"></i></a>
@@ -59,8 +61,8 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
                         <div class="logo">
-                            <a href="./index.html">
-                                <img src="landing/img/logo.png" alt="">
+                            <a href="<?php echo base_url(); ?>index.php">
+                                <img src="<?php echo base_url(); ?>landing/img/logo.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -91,7 +93,10 @@
                                         <table>
                                             <tbody>
                                                 <tr>
-                                                    <td class="si-pic"><img src="landing/img/select-product-1.jpg" alt=""></td>
+                                                    <td class="si-pic">
+                                                        <img src="<?php echo base_url(); ?>landing/img/select-product-1.jpg" alt="">
+                                                    </td>
+
                                                     <td class="si-text">
                                                         <div class="product-selected">
                                                             <p>$60.00 x 1</p>
@@ -103,7 +108,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="si-pic"><img src="landing/img/select-product-2.jpg" alt=""></td>
+                                                    <td class="si-pic"><img src="<?php echo base_url(); ?>landing/img/select-product-2.jpg" alt=""></td>
                                                     <td class="si-text">
                                                         <div class="product-selected">
                                                             <p>$60.00 x 1</p>
@@ -122,7 +127,7 @@
                                         <h5>$120.00</h5>
                                     </div>
                                     <div class="select-button">
-                                        <a href="#" class="primary-btn view-card">VIEW CARD</a>
+                                        <a href="#" class="primary-btn view-card">VIEW CART</a>
                                         <a href="#" class="primary-btn checkout-btn">CHECK OUT</a>
                                     </div>
                                 </div>
@@ -153,8 +158,8 @@
                 </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="./index.html">Home</a></li>
-                        <li><a href="./shop.html">Shop</a></li>
+                        <li class="active"><a href="<?php echo base_url(); ?>index.php">Home</a></li>
+                        <li><a href="<?php echo base_url(); ?>lending/shop.php">Shop</a></li>
                         <li><a href="#">Collection</a>
                             <ul class="dropdown">
                                 <li><a href="#">Men's</a></li>
@@ -162,18 +167,7 @@
                                 <li><a href="#">Kid's</a></li>
                             </ul>
                         </li>
-                        <li><a href="./blog.html">Blog</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
-                        <li><a href="#">Pages</a>
-                            <ul class="dropdown">
-                                <li><a href="./blog-details.html">Blog Details</a></li>
-                                <li><a href="./shopping-cart.html">Shopping Cart</a></li>
-                                <li><a href="./check-out.html">Checkout</a></li>
-                                <li><a href="./faq.html">Faq</a></li>
-                                <li><a href="./register.html">Register</a></li>
-                                <li><a href="./login.html">Login</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="<?php echo base_url(); ?>lending/contact.php">Contact</a></li>
                     </ul>
                 </nav>
                 <div id="mobile-menu-wrap"></div>
