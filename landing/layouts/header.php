@@ -43,17 +43,45 @@
                         +254715053109
                     </div>
                 </div>
-                <div class="ht-right">
-                    <a href="<?php echo base_url(); ?>login.php" class="login-panel">
-                        <i class="fa fa-user"></i>Login
-                    </a>
-                    <div class="top-social">
-                        <a href="#"><i class="ti-facebook"></i></a>
-                        <a href="#"><i class="ti-twitter-alt"></i></a>
-                        <a href="#"><i class="ti-linkedin"></i></a>
-                        <a href="#"><i class="ti-pinterest"></i></a>
+                <?php if($session->is_logged_in()){
+                    $user_id = $session->user_id; 
+                    $user = new Users();
+                    $current_user = $user->find_user_by_id($user_id);
+                    ?>
+                    <div class="ht-right">
+                        <a href="#" class="login-panel">
+                            <i class="fa fa-user"></i> Welcome <?php echo htmlentities($current_user['fullnames']); ?>
+                        </a>
+                        <div class="lan-selector">
+                            <select class="language_drop" name="countries" id="countries" style="width:300px;">
+                                <option>Dashbord</option>
+                                <option>
+                                    <a href="#" id="logout">
+                                        Logout
+                                    </a>
+                                </option>
+                            </select>
+                        </div>
+                        <div class="top-social">
+                            <a href="#"><i class="ti-facebook"></i></a>
+                            <a href="#"><i class="ti-twitter-alt"></i></a>
+                            <a href="#"><i class="ti-linkedin"></i></a>
+                            <a href="#"><i class="ti-pinterest"></i></a>
+                        </div>
                     </div>
-                </div>
+                <?php }else{ ?>
+                    <div class="ht-right">
+                        <a href="<?php echo base_url(); ?>login.php" class="login-panel">
+                            <i class="fa fa-user"></i>Login
+                        </a>
+                        <div class="top-social">
+                            <a href="#"><i class="ti-facebook"></i></a>
+                            <a href="#"><i class="ti-twitter-alt"></i></a>
+                            <a href="#"><i class="ti-linkedin"></i></a>
+                            <a href="#"><i class="ti-pinterest"></i></a>
+                        </div>
+                    </div>
+                <?php } ?>
             </div>
         </div>
         <div class="container">
@@ -127,8 +155,8 @@
                                         <h5>$120.00</h5>
                                     </div>
                                     <div class="select-button">
-                                        <a href="#" class="primary-btn view-card">VIEW CART</a>
-                                        <a href="#" class="primary-btn checkout-btn">CHECK OUT</a>
+                                        <a href="<?php echo base_url(); ?>/landing/cart.php" class="primary-btn view-card">VIEW CART</a>
+                                        <a href="<?php echo base_url(); ?>/landing/checkout.php" class="primary-btn checkout-btn">CHECK OUT</a>
                                     </div>
                                 </div>
                             </li>
@@ -159,7 +187,7 @@
                 <nav class="nav-menu mobile-menu">
                     <ul>
                         <li class="active"><a href="<?php echo base_url(); ?>index.php">Home</a></li>
-                        <li><a href="<?php echo base_url(); ?>lending/shop.php">Shop</a></li>
+                        <li><a href="<?php echo base_url(); ?>landing/shop.php">Shop</a></li>
                         <li><a href="#">Collection</a>
                             <ul class="dropdown">
                                 <li><a href="#">Men's</a></li>
@@ -167,7 +195,7 @@
                                 <li><a href="#">Kid's</a></li>
                             </ul>
                         </li>
-                        <li><a href="<?php echo base_url(); ?>lending/contact.php">Contact</a></li>
+                        <li><a href="<?php echo base_url(); ?>landing/contact.php">Contact</a></li>
                     </ul>
                 </nav>
                 <div id="mobile-menu-wrap"></div>

@@ -14,3 +14,9 @@ require_once(CONFIG_PATH.DS.'database.php');
 
 // load all system functions
 require_once(MODELS_PATH.DS.'functions.php');
+
+// load sessions 
+require_once(MODELS_PATH.DS.'sessions.php');
+
+// load users
+require_once(MODELS_PATH.DS.'users.php');

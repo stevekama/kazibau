@@ -245,6 +245,10 @@
 			}
 		}
 		$button.parent().find('input').val(newVal);
-	});
+    });
+    
+    $('#logout').click(function(){
+        alert();
+    });
 
 })(jQuery);
