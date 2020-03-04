@@ -18,5 +18,17 @@ require_once(MODELS_PATH.DS.'functions.php');
 // load sessions 
 require_once(MODELS_PATH.DS.'sessions.php');
 
+// load user type
+require_once(MODELS_PATH.DS.'user_type.php');
+
 // load users
 require_once(MODELS_PATH.DS.'users.php');
+
+// load categories
+require_once(MODELS_PATH.DS.'categories.php');
+
+// load categories
+require_once(MODELS_PATH.DS.'categories.php');
+
+// load categories
+require_once(MODELS_PATH.DS.'brands.php');

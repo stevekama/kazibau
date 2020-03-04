@@ -49,22 +49,30 @@
                     $current_user = $user->find_user_by_id($user_id);
                     ?>
                     <div class="ht-right">
+                        <a href="#" class="login-panel logout">
+                            Logout
+                        </a>
                         <a href="#" class="login-panel">
                             <i class="fa fa-user"></i> Welcome <?php echo htmlentities($current_user['fullnames']); ?>
                         </a>
-                        <div class="lan-selector">
-                            <select class="language_drop" name="countries" id="countries" style="width:300px;">
-                                <option>Dashbord</option>
-                                <option>
-                                    <a href="#" id="logout">
-                                        Logout
-                                    </a>
-                                </option>
-                            </select>
-                        </div>
+                        
+                        <?php 
+                        $user_type = new User_Type();
+                        $type = $user_type->find_type_by_id($current_user['user_type_id']);
+                        if(!$type){
+                            die();
+                        }
+                        if($type['user_type'] == "ADMINS"){ ?>
+                            <div class="lan-selector">
+                                <div class="btn-group" role="group">
+                                    <a href="<?php echo base_url(); ?>public/index.php" class="btn btn-link">Dashboard</a>
+                                </div>
+                            </div>
+                        <?php } ?>
+                        
                         <div class="top-social">
-                            <a href="#"><i class="ti-facebook"></i></a>
-                            <a href="#"><i class="ti-twitter-alt"></i></a>
+                            <!-- <a href="#"><i class="ti-facebook"></i></a> -->
+                            <!-- <a href="#"><i class="ti-twitter-alt"></i></a> -->
                             <a href="#"><i class="ti-linkedin"></i></a>
                             <a href="#"><i class="ti-pinterest"></i></a>
                         </div>
@@ -75,8 +83,8 @@
                             <i class="fa fa-user"></i>Login
                         </a>
                         <div class="top-social">
-                            <a href="#"><i class="ti-facebook"></i></a>
-                            <a href="#"><i class="ti-twitter-alt"></i></a>
+                            <!-- <a href="#"><i class="ti-facebook"></i></a> -->
+                            <!-- <a href="#"><i class="ti-twitter-alt"></i></a> -->
                             <a href="#"><i class="ti-linkedin"></i></a>
                             <a href="#"><i class="ti-pinterest"></i></a>
                         </div>
@@ -90,7 +98,7 @@
                     <div class="col-lg-2 col-md-2">
                         <div class="logo">
                             <a href="<?php echo base_url(); ?>index.php">
-                                <img src="<?php echo base_url(); ?>landing/img/logo.png" alt="">
+                                <img src="<?php echo base_url(); ?>landing/img/logo.png" alt="" width="150">
                             </a>
                         </div>
                     </div>
@@ -127,7 +135,7 @@
 
                                                     <td class="si-text">
                                                         <div class="product-selected">
-                                                            <p>$60.00 x 1</p>
+                                                            <p>Kes.60.00 x 1</p>
                                                             <h6>Kabino Bedside Table</h6>
                                                         </div>
                                                     </td>
@@ -139,7 +147,7 @@
                                                     <td class="si-pic"><img src="<?php echo base_url(); ?>landing/img/select-product-2.jpg" alt=""></td>
                                                     <td class="si-text">
                                                         <div class="product-selected">
-                                                            <p>$60.00 x 1</p>
+                                                            <p>Kes.60.00 x 1</p>
                                                             <h6>Kabino Bedside Table</h6>
                                                         </div>
                                                     </td>
@@ -152,7 +160,7 @@
                                     </div>
                                     <div class="select-total">
                                         <span>total:</span>
-                                        <h5>$120.00</h5>
+                                        <h5>Kes.120.00</h5>
                                     </div>
                                     <div class="select-button">
                                         <a href="<?php echo base_url(); ?>/landing/cart.php" class="primary-btn view-card">VIEW CART</a>
@@ -160,7 +168,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="cart-price">$150.00</li>
+                            <li class="cart-price">Kes.150.00</li>
                         </ul>
                     </div>
                 </div>
@@ -171,16 +179,28 @@
                 <div class="nav-depart">
                     <div class="depart-btn">
                         <i class="ti-menu"></i>
-                        <span>All departments</span>
+                        <span>All Categories</span>
+                        <?php 
+                        $categories = new Categories();
+                        $all_categories = $categories->fetch_all();
+                        $count = $all_categories->rowCount(); ?>
                         <ul class="depart-hover">
-                            <li class="active"><a href="#">Women’s Clothing</a></li>
-                            <li><a href="#">Men’s Clothing</a></li>
-                            <li><a href="#">Underwear</a></li>
-                            <li><a href="#">Kid's Clothing</a></li>
-                            <li><a href="#">Brand Fashion</a></li>
-                            <li><a href="#">Accessories/Shoes</a></li>
-                            <li><a href="#">Luxury Brands</a></li>
-                            <li><a href="#">Brand Outdoor Apparel</a></li>
+                            <?php 
+                            if($count > 0){
+                                while($current_category = $all_categories->fetch(PDO::FETCH_ASSOC)){ ?>
+                                    <li>
+                                        <a href="<?php echo base_url(); ?>landing/categories.php?category=<?php echo urlencode($current_category['id']); ?>">
+                                            <?php echo htmlentities($current_category['category_name']); ?>
+                                        </a>
+                                    </li>
+                                <?php }
+                            }else{ ?>
+                                <li>
+                                        <a href="#">
+                                            No Categories added yet
+                                        </a>
+                                    </li>
+                            <?php } ?>        
                         </ul>
                     </div>
                 </div>
@@ -188,13 +208,14 @@
                     <ul>
                         <li class="active"><a href="<?php echo base_url(); ?>index.php">Home</a></li>
                         <li><a href="<?php echo base_url(); ?>landing/shop.php">Shop</a></li>
-                        <li><a href="#">Collection</a>
+                        <!-- <li>
+                            <a href="#"></a>
                             <ul class="dropdown">
                                 <li><a href="#">Men's</a></li>
                                 <li><a href="#">Women's</a></li>
                                 <li><a href="#">Kid's</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li><a href="<?php echo base_url(); ?>landing/contact.php">Contact</a></li>
                     </ul>
                 </nav>

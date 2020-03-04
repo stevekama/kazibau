@@ -27,6 +27,9 @@ require_once('landing/layouts/header.php');
                     <h2>Register</h2>
                     <form id="registrationForm" >
                         <div class="group-input">
+                            <input type="hidden" id="user_type" value="2" name="type_id">
+                        </div>
+                        <div class="group-input">
                             <label for="fullnames">Fullnames *</label>
                             <input type="text" id="fullnames" name="fullnames">
                         </div>
@@ -54,7 +57,7 @@ require_once('landing/layouts/header.php');
                         <button type="submit" id="registrationSubmitBtn" class="site-btn register-btn">REGISTER</button>
                     </form>
                     <div class="switch-login">
-                        <a href="./login.html" class="or-login">Or Login</a>
+                        <a href="<?php echo base_url(); ?>login.php" class="or-login">Or Login</a>
                     </div>
                 </div>
             </div>

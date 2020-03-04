@@ -9,6 +9,7 @@ class Users {
 
     // Users properties 
     public $id;
+    public $user_type_id;
     public $fullnames;
     public $email;
     public $phone;
@@ -105,19 +106,19 @@ class Users {
         $query = "";
         if(empty($this->id)){
             $query .= "INSERT INTO ".$this->table_name."(";
-            $query .= "fullnames, email, phone, dob, ";
+            $query .= "user_type_id, fullnames, email, phone, dob, ";
             $query .= "date_registered, gender, location, ";
             $query .= "profile, username, password, confirm_password, ";
             $query .= "forgot_code, created_date, edited_date";
             $query .= ")VALUES(";
-            $query .= ":fullnames, :email, :phone, :dob, ";
+            $query .= ":user_type_id, :fullnames, :email, :phone, :dob, ";
             $query .= ":date_registered, :gender, :location, ";
             $query .= ":profile, :username, :password, :confirm_password, ";
             $query .= ":forgot_code, :created_date, :edited_date";
             $query .= ")";
         }else{
             $query .= "UPDATE ".$this->schema.".".$this->table_name." SET ";
-            $query .= "fullnames=:fullnames, email:email, phone=:phone, dob=:dob, ";
+            $query .= "user_type_id=:user_type_id, fullnames=:fullnames, email:email, phone=:phone, dob=:dob, ";
             $query .= "date_registered=:date_registered, gender=:gender, location=:location, ";
             $query .= "profile=:profile, username=:username, password=:password, confirm_password=:confirm_password, ";
             $query .= "forgot_code=:forgot_code, created_date=:created_date, edited_date=:edited_date ";
@@ -129,7 +130,7 @@ class Users {
         if(!empty($this->id)){
             $this->id = htmlentities($this->id);
         }
-
+        $this->user_type_id = htmlentities($this->user_type_id);
         $this->fullnames = htmlentities($this->fullnames);
         $this->email = htmlentities($this->email);
         $this->phone = htmlentities($this->phone);
@@ -149,6 +150,7 @@ class Users {
         if(!empty($this->id)){
             $stmt->bindParam(':id', $this->id);
         }
+        $stmt->bindParam(':user_type_id', $this->user_type_id);
         $stmt->bindParam(':fullnames', $this->fullnames);
         $stmt->bindParam(':email', $this->email);
         $stmt->bindParam(':phone', $this->phone);

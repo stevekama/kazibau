@@ -9,32 +9,26 @@ require_once('landing/layouts/header.php');
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5">
-                        <span>Bag,kids</span>
-                        <h1>Black friday</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore</p>
-                        <a href="#" class="primary-btn">Shop Now</a>
+                        <h1>Look Good Feel Good</h1>
+                        <a href="<?php echo base_url(); ?>landing/shop.php" class="primary-btn">Shop Now</a>
                     </div>
                 </div>
-                <div class="off-card">
+                <!-- <div class="off-card">
                     <h2>Sale <span>50%</span></h2>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="single-hero-items set-bg" data-setbg="landing/img/hero-2.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5">
-                        <span>Bag,kids</span>
-                        <h1>Black friday</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore</p>
-                        <a href="#" class="primary-btn">Shop Now</a>
+                        <h1>Look Good Feel Good</h1>
+                        <a href="<?php echo base_url(); ?>landing/shop.php" class="primary-btn">Shop Now</a>
                     </div>
                 </div>
-                <div class="off-card">
+                <!-- <div class="off-card">
                     <h2>Sale <span>50%</span></h2>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -42,7 +36,7 @@ require_once('landing/layouts/header.php');
 <!-- Hero Section End -->
 
 <!-- Banner Section Begin -->
-<div class="banner-section spad">
+<!-- <div class="banner-section spad">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-4">
@@ -71,7 +65,7 @@ require_once('landing/layouts/header.php');
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Banner Section End -->
 
 <!-- Women Banner Section Begin -->
@@ -197,8 +191,8 @@ require_once('landing/layouts/header.php');
         <div class="col-lg-6 text-center">
             <div class="section-title">
                 <h2>Deal Of The Week</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed<br /> do ipsum dolor sit amet,
-                    consectetur adipisicing elit </p>
+                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed<br /> do ipsum dolor sit amet,
+                    consectetur adipisicing elit </p> -->
                 <div class="product-price">
                     $35.00
                     <span>/ HanBag</span>
@@ -229,7 +223,7 @@ require_once('landing/layouts/header.php');
 <!-- Deal Of The Week Section End -->
 
 <!-- Man Banner Section Begin -->
-<section class="man-banner spad">
+<!-- <section class="man-banner spad">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-8">
@@ -342,7 +336,7 @@ require_once('landing/layouts/header.php');
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- Man Banner Section End -->
 
 <!-- Instagram Section Begin -->
@@ -350,44 +344,44 @@ require_once('landing/layouts/header.php');
     <div class="insta-item set-bg" data-setbg="landing/img/insta-1.jpg">
         <div class="inside-text">
             <i class="ti-instagram"></i>
-            <h5><a href="#">colorlib_Collection</a></h5>
+            <h5><a href="#">kazibau</a></h5>
         </div>
     </div>
     <div class="insta-item set-bg" data-setbg="landing/img/insta-2.jpg">
         <div class="inside-text">
             <i class="ti-instagram"></i>
-            <h5><a href="#">colorlib_Collection</a></h5>
+            <h5><a href="#">kazibau</a></h5>
         </div>
     </div>
     <div class="insta-item set-bg" data-setbg="landing/img/insta-3.jpg">
         <div class="inside-text">
             <i class="ti-instagram"></i>
-            <h5><a href="#">colorlib_Collection</a></h5>
+            <h5><a href="#">kazibau</a></h5>
         </div>
     </div>
     <div class="insta-item set-bg" data-setbg="landing/img/insta-4.jpg">
         <div class="inside-text">
             <i class="ti-instagram"></i>
-            <h5><a href="#">colorlib_Collection</a></h5>
+            <h5><a href="#">kazibau</a></h5>
         </div>
     </div>
     <div class="insta-item set-bg" data-setbg="landing/img/insta-5.jpg">
         <div class="inside-text">
             <i class="ti-instagram"></i>
-            <h5><a href="#">colorlib_Collection</a></h5>
+            <h5><a href="#">kazibau</a></h5>
         </div>
     </div>
     <div class="insta-item set-bg" data-setbg="landing/img/insta-6.jpg">
         <div class="inside-text">
             <i class="ti-instagram"></i>
-            <h5><a href="#">colorlib_Collection</a></h5>
+            <h5><a href="#">kazibau</a></h5>
         </div>
     </div>
 </div>
 <!-- Instagram Section End -->
 
 <!-- Latest Blog Section Begin -->
-<section class="latest-blog spad">
+<!-- <section class="latest-blog spad">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -499,11 +493,11 @@ require_once('landing/layouts/header.php');
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- Latest Blog Section End -->
 
 <!-- Partner Logo Section Begin -->
-<div class="partner-logo">
+<!-- <div class="partner-logo">
     <div class="container">
         <div class="logo-carousel owl-carousel">
             <div class="logo-item">
@@ -533,6 +527,6 @@ require_once('landing/layouts/header.php');
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Partner Logo Section End -->
 <?php require_once('landing/layouts/footer.php'); ?>

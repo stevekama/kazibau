@@ -131,7 +131,7 @@ require_once('layouts/header.php');
                         </div>
                     </div>
                 </div>
-                <div class="filter-widget">
+                <!-- <div class="filter-widget">
                     <h4 class="fw-title">Tags</h4>
                     <div class="fw-tags">
                         <a href="#">Towel</a>
@@ -142,24 +142,24 @@ require_once('layouts/header.php');
                         <a href="#">Men's hats</a>
                         <a href="#">Backpack</a>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="col-lg-9 order-1 order-lg-2">
                 <div class="product-show-option">
                     <div class="row">
-                        <div class="col-lg-7 col-md-7">
-                            <div class="select-option">
+                        <!-- <div class="col-lg-7 col-md-7"> -->
+                            <!-- <div class="select-option">
                                 <select class="sorting">
                                     <option value="">Default Sorting</option>
                                 </select>
                                 <select class="p-show">
                                     <option value="">Show:</option>
                                 </select>
-                            </div>
-                        </div>
-                        <div class="col-lg-5 col-md-5 text-right">
+                            </div> -->
+                        <!-- </div> -->
+                        <!-- <div class="col-lg-5 col-md-5 text-right">
                             <p>Show 01- 09 Of 36 Product</p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="product-list">
@@ -184,8 +184,8 @@ require_once('layouts/header.php');
                                         <h5>Pure Pineapple</h5>
                                     </a>
                                     <div class="product-price">
-                                        $14.00
-                                        <span>$35.00</span>
+                                        Kes.14.00
+                                        <span>Kes.35.00</span>
                                     </div>
                                 </div>
                             </div>
@@ -209,8 +209,8 @@ require_once('layouts/header.php');
                                         <h5>Guangzhou sweater</h5>
                                     </a>
                                     <div class="product-price">
-                                        $13.00
-                                        <span>$35.00</span>
+                                        Kes.13.00
+                                        <span>Kes.35.00</span>
                                     </div>
                                 </div>
                             </div>
@@ -234,8 +234,8 @@ require_once('layouts/header.php');
                                         <h5>Guangzhou sweater</h5>
                                     </a>
                                     <div class="product-price">
-                                        $34.00
-                                        <span>$35.00</span>
+                                        Kes.34.00
+                                        <span>Kes.35.00</span>
                                     </div>
                                 </div>
                             </div>
@@ -259,8 +259,8 @@ require_once('layouts/header.php');
                                         <h5>Microfiber Wool Scarf</h5>
                                     </a>
                                     <div class="product-price">
-                                        $64.00
-                                        <span>$35.00</span>
+                                        Kes.64.00
+                                        <span>Kes.35.00</span>
                                     </div>
                                 </div>
                             </div>
@@ -284,8 +284,8 @@ require_once('layouts/header.php');
                                         <h5>Men's Painted Hat</h5>
                                     </a>
                                     <div class="product-price">
-                                        $44.00
-                                        <span>$35.00</span>
+                                        Kes.44.00
+                                        <span>Kes.35.00</span>
                                     </div>
                                 </div>
                             </div>
@@ -309,8 +309,8 @@ require_once('layouts/header.php');
                                         <h5>Converse Shoes</h5>
                                     </a>
                                     <div class="product-price">
-                                        $34.00
-                                        <span>$35.00</span>
+                                        Kes.34.00
+                                        <span>Kes.35.00</span>
                                     </div>
                                 </div>
                             </div>
@@ -335,8 +335,8 @@ require_once('layouts/header.php');
                                         <h5>Pure Pineapple</h5>
                                     </a>
                                     <div class="product-price">
-                                        $64.00
-                                        <span>$35.00</span>
+                                        Kes.64.00
+                                        <span>Kes.35.00</span>
                                     </div>
                                 </div>
                             </div>
@@ -360,8 +360,8 @@ require_once('layouts/header.php');
                                             <h5>2 Layer Windbreaker</h5>
                                         </a>
                                         <div class="product-price">
-                                            $44.00
-                                            <span>$35.00</span>
+                                            Kes.44.00
+                                            <span>Kes.35.00</span>
                                         </div>
                                     </div>
                                 </div>
@@ -385,8 +385,8 @@ require_once('layouts/header.php');
                                             <h5>Converse Shoes</h5>
                                         </a>
                                         <div class="product-price">
-                                            $34.00
-                                            <span>$35.00</span>
+                                            Kes.34.00
+                                            <span>Kes.35.00</span>
                                         </div>
                                     </div>
                                 </div>

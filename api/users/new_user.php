@@ -23,7 +23,7 @@ if($password !== $confirm_password){
     echo json_encode($data);
     die();
 }
-
+$users->user_type_id = $_POST['type_id'];
 $users->fullnames = $_POST['fullnames'];
 $users->email = $_POST['email'];
 /// check if email exists
