@@ -36,11 +36,11 @@
                     <i class="fa fa-files-o"></i>
                     <span>Categories</span>
                     <span class="pull-right-container">
-                        <span class="label label-primary pull-right">4</span>
+                        <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="<?php echo base_url(); ?>public/categories/index.php"><i class="fa fa-circle-o"></i> Categories</a></li>
+                <li><a href="<?php echo base_url(); ?>public/categories/index.php"><i class="fa fa-circle-o"></i> Categories</a></li>
                 </ul>
             </li>
 
@@ -49,11 +49,15 @@
                     <i class="fa fa-th"></i>
                     <span>Brands</span>
                     <span class="pull-right-container">
-                        <span class="label label-warning pull-right">4</span>
+                        <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="<?php echo base_url(); ?>public/brands/index.php"><i class="fa fa-circle-o"></i> Categories</a></li>
+                    <li>
+                        <a href="<?php echo base_url(); ?>public/brands/index.php">
+                            <i class="fa fa-circle-o"></i> Brands
+                        </a>
+                    </li>
                 </ul>
             </li>
 

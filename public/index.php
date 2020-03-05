@@ -26,14 +26,14 @@ require_once('layouts/header.php');
       <!-- small box -->
       <div class="small-box bg-aqua">
         <div class="inner">
-          <h3>150</h3>
+          <h3 id="numCategories"></h3>
 
           <p>Categories</p>
         </div>
         <div class="icon">
           <i class="ion ion-bag"></i>
         </div>
-        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+        <a href="<?php echo base_url(); ?>public/categories/index.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
       </div>
     </div>
     <!-- ./col -->
@@ -42,14 +42,14 @@ require_once('layouts/header.php');
       <!-- small box -->
       <div class="small-box bg-green">
         <div class="inner">
-          <h3>53</h3>
+          <h3 id="numBrands"></h3>
 
           <p>Brands</p>
         </div>
         <div class="icon">
           <i class="ion ion-stats-bars"></i>
         </div>
-        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+        <a href="<?php echo base_url(); ?>public/brands/index.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
       </div>
     </div>
     <!-- ./col -->
@@ -227,4 +227,4 @@ require_once('layouts/header.php');
 <!-- /.content -->
 
 <?php require_once('layouts/footer.php'); ?>
-<script src="<?php echo base_url(); ?>public/dist/js/pages/dashboard2.js"></script>
+<script src="<?php echo base_url(); ?>public/dist/js/pages/main.js"></script>

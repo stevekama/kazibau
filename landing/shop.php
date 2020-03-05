@@ -23,44 +23,51 @@ require_once('layouts/header.php');
             <div class="col-lg-3 col-md-6 col-sm-8 order-2 order-lg-1 produts-sidebar-filter">
                 <div class="filter-widget">
                     <h4 class="fw-title">Categories</h4>
+                    <?php $categories = new Categories(); ?>
                     <ul class="filter-catagories">
-                        <li><a href="#">Men</a></li>
-                        <li><a href="#">Women</a></li>
-                        <li><a href="#">Kids</a></li>
+                        <?php 
+                        $all_categories = $categories->fetch_all(); 
+                        $count_categories = $all_categories->rowCount();
+                        if($count_categories > 0){
+                            while($category = $all_categories->fetch(PDO::FETCH_ASSOC)){ ?>
+                                 <li>
+                                    <a href="<?php echo base_url(); ?>landing/categories.php?category=<?php echo urlencode($category['id']); ?>">
+                                        <?php echo htmlentities($category['category_name']); ?>
+                                    </a>
+                                </li>
+                            <?php } ?>
+                        <?php }else{ ?>
+                            <li>No Categories</li>
+                        <?php } ?>
                     </ul>
                 </div>
 
                 <div class="filter-widget">
                     <h4 class="fw-title">Brand</h4>
+                    <?php $brands = new Brands(); ?>
                     <div class="fw-brand-check">
-                        <div class="bc-item">
-                            <label for="bc-calvin">
-                                Calvin Klein
-                                <input type="checkbox" id="bc-calvin">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div class="bc-item">
-                            <label for="bc-diesel">
-                                Diesel
-                                <input type="checkbox" id="bc-diesel">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div class="bc-item">
-                            <label for="bc-polo">
-                                Polo
-                                <input type="checkbox" id="bc-polo">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div class="bc-item">
-                            <label for="bc-tommy">
-                                Tommy Hilfiger
-                                <input type="checkbox" id="bc-tommy">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
+                        <?php 
+                        $all_brands = $brands->fetch_all();
+                        $count_brands = $all_brands->rowCount();
+                        if($count_brands > 0){
+                            while($brand = $all_brands->fetch(PDO::FETCH_ASSOC)){ ?>
+                                <div class="bc-item">
+                                    <label for="bc-<?php echo htmlentities($brand['id']); ?>">
+                                        <?php echo htmlentities($brand['brand_name']); ?>
+                                        <input type="checkbox" id="bc-<?php echo htmlentities($brand['id']); ?>">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            <?php }
+                        }else{ ?>
+                            <div class="bc-item">
+                                <label for="bc-empty">
+                                    No Brands
+                                    <input type="checkbox" id="bc-empty">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
                 <div class="filter-widget">
