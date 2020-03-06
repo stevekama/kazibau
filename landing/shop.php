@@ -52,9 +52,9 @@ require_once('layouts/header.php');
                         if($count_brands > 0){
                             while($brand = $all_brands->fetch(PDO::FETCH_ASSOC)){ ?>
                                 <div class="bc-item">
-                                    <label for="bc-<?php echo htmlentities($brand['id']); ?>">
+                                    <label for="<?php echo htmlentities($brand['id']); ?>">
                                         <?php echo htmlentities($brand['brand_name']); ?>
-                                        <input type="checkbox" id="bc-<?php echo htmlentities($brand['id']); ?>">
+                                        <input type="checkbox" id="<?php echo htmlentities($brand['id']); ?>">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
